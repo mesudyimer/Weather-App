@@ -11,12 +11,19 @@ wetherform.addEventListener("submit", async event=>{
    display(wetherdata)
     }
     catch(error){
-        
-       displayerror(error)
+        displayerror(error)
+        setTimeout(() => {
+            displayerror("")
+        }, 2000);
+       
     }
     }
     else{
-        displayerror("please enter a city")
+         displayerror("please enter a city")
+      setTimeout(()=>{
+        displayerror("")   
+        },2000)
+        
     }
 });
 async function getwether(city) {
